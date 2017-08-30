@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TDD.Kata.StringCalculator/.vs/TDD.Kata.StringCalculator/v14/.suo
+/TDD.Kata.StringCalculator/packages
+/TDD.Kata.StringCalculator/TDD.Kata.StringCalculator/bin/Debug
+/TDD.Kata.StringCalculator/TDD.Kata.StringCalculator/obj/Debug
+/TDD.Kata.StringCalculator/TDD.Kata.StringCalculator.Tests.Unit/bin/Debug
+/TDD.Kata.StringCalculator/TDD.Kata.StringCalculator.Tests.Unit/obj/Debug
