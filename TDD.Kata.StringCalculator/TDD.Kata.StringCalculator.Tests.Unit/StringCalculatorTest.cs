@@ -24,5 +24,19 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
             //assert
             Assert.True(0==result);
         }
+
+        [Fact]
+        public void debe_devolver_el_mismo_numero()
+        {
+            //Arrange
+            string numbers = "4";
+            int numbersInt = int.Parse(numbers);
+
+            //Act
+            int result = Target.add(numbers);
+
+            //Assert
+            Assert.True(result == numbersInt);
+        }
     }
 }
