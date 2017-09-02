@@ -2,7 +2,7 @@
 
 namespace TDD.Kata.StringCalculator.Tests.Unit
 {
-   
+
     public class StringCalculatorTest
     {
         public StringCalculator Target;
@@ -59,6 +59,20 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
             //Arrange
             string numbers = "1,23,4,11,53";
             int numbersTotal = 1 + 23 + 4 + 11 + 53;
+
+            //Act
+            int result = Target.add(numbers);
+
+            //Assetr
+            Assert.True(result == numbersTotal);
+        }
+
+        [Fact]
+        public void suma_con_separadores_varios()
+        {
+            //Arrange
+            string numbers = "1\n2,3";
+            int numbersTotal = 6;
 
             //Act
             int result = Target.add(numbers);
