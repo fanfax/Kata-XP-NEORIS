@@ -19,10 +19,10 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
             string numbers = string.Empty;
 
             //Act
-           int result = Target.add(numbers);
+            int result = Target.add(numbers);
 
             //assert
-            Assert.True(0==result);
+            Assert.True(0 == result);
         }
 
         [Fact]
@@ -39,19 +39,32 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
             Assert.True(result == numbersInt);
         }
 
-
         [Fact]
         public void debe_devolver_la_suma_de_los_2_numeros()
         {
             //Arrange
             string numbers = "4,3";
-            int numbersInt = 7;
+            int numbersTotal = 7;
 
             //Act
             int result = Target.add(numbers);
 
             //Assert
-            Assert.True(result == numbersInt);
+            Assert.True(result == numbersTotal);
+        }
+
+        [Fact]
+        public void debe_devolver_la_suma_de_todos_los_numeros()
+        {
+            //Arrange
+            string numbers = "1,23,4,11,53";
+            int numbersTotal = 1 + 23 + 4 + 11 + 53;
+
+            //Act
+            int result = Target.add(numbers);
+
+            //Assert
+            Assert.True(result == numbersTotal);
         }
     }
 }
