@@ -14,25 +14,19 @@ namespace TDD.Kata.StringCalculator
             {
                 return default(int);
             }
-            else
+
+            int totalizer = 0;
+            String[] arrayString = numbers.Split(',');
+            int number;
+
+            foreach (String stringNumber in arrayString)
             {
-                String[] arrayString = numbers.Split(',');
-
-                int totalizador = default(int);
-
-                for (int i = 0; i < arrayString.Length; i++)
-                {
-                    int n = default(int);
-                    if (int.TryParse(arrayString[i], out n))
-                    {
-                        totalizador += n;
-                    }
-                }
-
-                return totalizador;
-
+                number = 0;
+                int.TryParse(stringNumber, out number);
+                totalizer += number;
             }
 
+            return totalizer;
         }
     }
 }
