@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 
 namespace TDD.Kata.StringCalculator.Tests.Unit
 {
@@ -79,6 +80,33 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
 
             //Assert
             Assert.True(result == numbersTotal);
+        }
+
+        [Fact]
+        public void suma_con_separador_default()
+        {
+            //Arrange
+            string numbers = "//;\n1;2";
+            int numbersTotal = 3;
+
+            //Act
+            int result = Target.add(numbers);
+
+            //Assert
+            Assert.True(result == numbersTotal);
+        }
+
+        [Fact]
+        public void suma_sin_negativos()
+        {
+            //Arrange
+            string numbers = "1,4,-1";
+
+            //Act
+            Exception ex = Assert.Throws<Exception>(() => Target.add(numbers));
+
+            //Assert
+            Assert.Equal("negatives not allowed: -1", ex.Message);
         }
     }
 }
