@@ -108,5 +108,19 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
             //Assert
             Assert.Equal("negatives not allowed: -1", ex.Message);
         }
+
+        [Fact]
+        public void suma_ignorando_numeros_grandes()
+        {
+            //Arrange
+            string numbers = "//;\n1001;2";
+            int numbersTotal = 2;
+
+            //Act
+            int result = Target.add(numbers);
+
+            //Assert
+            Assert.True(result == numbersTotal);
+        }
     }
 }

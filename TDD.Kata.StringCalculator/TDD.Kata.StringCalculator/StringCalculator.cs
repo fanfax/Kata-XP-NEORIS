@@ -28,6 +28,8 @@ namespace TDD.Kata.StringCalculator
             {
                 number = 0;
                 int.TryParse(stringNumber, out number);
+                if (number > 1000)
+                    continue;
                 totalizer += number;
 
                 this.SaveIfNegative(number);
